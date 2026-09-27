@@ -1,0 +1,26 @@
+{
+  "application": {
+    "name": "ServiceNow Ticket Ingestion",
+    "environment": "development"
+  },
+  "database": {
+    "url_env": "DATABASE_URL",
+    "pool_size": 10,
+    "max_overflow": 20,
+    "pool_timeout_seconds": 30
+  },
+  "jwt": {
+    "private_key_env": "JWT_PRIVATE_KEY",
+    "public_key_env": "JWT_PUBLIC_KEY",
+    "issuer": "ticket-ingestion-auth",
+    "audience": "ticket-ingestion-api",
+    "algorithm": "RS256",
+    "access_token_minutes": 15
+  },
+  "servicenow": {
+    "base_url": "http://dummy-servicenow:8000/mock-servicenow",
+    "token_env": "SERVICENOW_CONNECTOR_TOKEN",
+    "timeout_seconds": 10,
+    "maximum_attempts": 3
+  }
+}
